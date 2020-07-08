@@ -1,12 +1,19 @@
 # Trello Interface Rebuild in HTML
 
-Practice project to rebuild the Trello interface in HTML and CSS from scratch.
+Practive project to learn HTML and CSS.
 
 To-do:
 
 - Fix star logo height
 - Fix spacing board-header
 - fix margin between board-header board-lists
+- Make the horizontal scroll on the parent class, so it is on the bottom of the page \*/
+
+Add:
+
+- Media Queries and breakpoints
+- Transparent Scrollbar
+- Interactions with Javascript
 
 Functionality:
 

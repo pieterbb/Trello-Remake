@@ -1,6 +1,3 @@
-/* TODO: Add Media queries and breakpoints */
-/* TODO: Add transparent scrollbar */
-
 /* CSS Reset */
 * {
   box-sizing: border-box;
@@ -26,11 +23,6 @@ body {
 }
 
 /* Navbar */
-
-/* 
-TODO: The icon containers are slight longer vertical than horizontal 
-TODO: Make sure the logo is centered and the rest pushed to the edge
-*/
 
 .navbar__container {
   display: flex;
@@ -67,7 +59,6 @@ TODO: Make sure the logo is centered and the rest pushed to the edge
   font-size: 14px;
 }
 
-/* Hacky override of the background styling on hove Avatar */
 .navbar__avatar:hover {
   background: var(--card-background-color);
 }
@@ -92,7 +83,6 @@ TODO: Make sure the logo is centered and the rest pushed to the edge
   outline: none;
 }
 
-/* TODO: How do I get the full background white when in focus and not just the input? */
 .navbar__searchbar-input input:focus {
   background: #fff;
   color: var(--main-font-color);
@@ -108,10 +98,6 @@ TODO: Make sure the logo is centered and the rest pushed to the edge
   opacity: 0.5;
 }
 
-/* Debug rule */
-.navbar__logo {
-}
-
 .navbar__logo img:hover {
   opacity: 0.75;
 }
@@ -120,7 +106,6 @@ TODO: Make sure the logo is centered and the rest pushed to the edge
   background: #00c2e0;
 }
 
-/* TODO: Fix Star height */
 .board-header__star-btn {
   padding: 21px 0;
   height: 31px;
@@ -162,7 +147,6 @@ TODO: Make sure the logo is centered and the rest pushed to the edge
   padding-right: 0.5rem;
 }
 
-/* TODO: Fix the height of the border line */
 .board-header__divider-btn {
   background: none;
 }
@@ -194,7 +178,6 @@ TODO: Make sure the logo is centered and the rest pushed to the edge
   background: var(--background-color);
 }
 
-/* TODO: Make the horizontal scroll on the parent class, so it is on the bottom of the page */
 .board-content__container {
   display: flex;
   flex-wrap: nowrap;
