@@ -55,11 +55,26 @@ TODO: Make sure the logo is centered and the rest pushed to the edge
   cursor: pointer;
 }
 
+.navbar__left-btns > *:hover,
+.navbar__right-btns > *:hover{
+  background: rgba(100%, 100%, 100%, 0.4);
+}
+
+
 .navbar__avatar {
   border-radius: 50%;
   color: var(--main-font-color);
   background-color: var(--card-background-color);
   font-size: 14px;
+}
+
+/* Hacky override of the background styling on hove Avatar */
+.navbar__avatar:hover{
+  background: var(--card-background-color);
+}
+
+.navbar__bell-btn:hover{
+  background: #00AECC;
 }
 
 .navbar__boards-btn-text {
@@ -86,7 +101,11 @@ TODO: Make sure the logo is centered and the rest pushed to the edge
 }
 
 .navbar__logo img {
-  width: 100px;
+  display: block;
+  left: 50%;
+  top: 5px;
+  position: absolute;
+  width: 80px;
   opacity: 0.5;
 }
 
@@ -103,18 +122,23 @@ TODO: Make sure the logo is centered and the rest pushed to the edge
 }
 
 /* TODO: Fix Star height */
-.board-header__star-btn {
+.board-header__star-btn{
+  padding: 21px 0;
+  height: 31px;
+}
+
+.board-header__star-btn i{
   height: 100%;
 }
 
 /* Board Header */
-
 .board-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 14px;
   font-weight: 400;
+  margin: 4px 0;
 }
 
 .board-header__left-btns > *,
@@ -127,6 +151,7 @@ TODO: Make sure the logo is centered and the rest pushed to the edge
   margin: 0.15rem;
   padding: 0.5rem;
   border-radius: 2px;
+  cursor: pointer;
 }
 
 .board-header div {
@@ -140,11 +165,7 @@ TODO: Make sure the logo is centered and the rest pushed to the edge
 
 /* TODO: Fix the height of the border line */
 .board-header__divider-btn {
-  border-left: 1px rgba(255, 255, 255, 0.25) solid;
-  border-radius: 0;
   background: none;
-  margin: 0;
-  padding: 0;
 }
 
 .board-header__title {
@@ -155,13 +176,25 @@ TODO: Make sure the logo is centered and the rest pushed to the edge
 .board-header__avatar {
   border-radius: 50%;
   color: var(--main-font-color);
-  background-color: var(--card-background-color);
+  background-color: var(--list-background-color);
   font-weight: bold;
+  position: relative;
+}
+
+.board-header__avatar-membership-badge{
+  color: gold;
+  font-size: .6rem;
+  position: absolute;
+  top: 3%;
+  right:5%; 
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
 }
 
 .board-content {
-  height: 100vh;
+
   background: var(--background-color);
+
 }
 
 /* TODO: Make the horizontal scroll on the parent class, so it is on the bottom of the page */
@@ -207,25 +240,33 @@ TODO: Make sure the logo is centered and the rest pushed to the edge
 
 .board-list__footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
+  margin: 8px;
+  margin-top: 2px;
   align-items: center;
   color: var(--list-footer-font-color);
   height: 38px;
-  padding: 0 16px;
 }
 
 .board-list__add-card {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   padding: 8px;
   border-radius: 3px;
+  flex: 3 1 auto;
 }
 .board-list__add-card i{
-  padding: 4px;
+  padding-right: 8px;
 }
 
 .board-list__template-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  text-align: center;
+  height: 33px;
 }
 
 .board-list__card:hover {
@@ -235,4 +276,5 @@ TODO: Make sure the logo is centered and the rest pushed to the edge
 .board-list__add-card:hover,
 .board-list__template-btn:hover {
   background: #dadce2;
+  border-radius: 5px;
 }
