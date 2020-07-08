@@ -56,10 +56,9 @@ TODO: Make sure the logo is centered and the rest pushed to the edge
 }
 
 .navbar__left-btns > *:hover,
-.navbar__right-btns > *:hover{
+.navbar__right-btns > *:hover {
   background: rgba(100%, 100%, 100%, 0.4);
 }
-
 
 .navbar__avatar {
   border-radius: 50%;
@@ -69,12 +68,12 @@ TODO: Make sure the logo is centered and the rest pushed to the edge
 }
 
 /* Hacky override of the background styling on hove Avatar */
-.navbar__avatar:hover{
+.navbar__avatar:hover {
   background: var(--card-background-color);
 }
 
-.navbar__bell-btn:hover{
-  background: #00AECC;
+.navbar__bell-btn:hover {
+  background: #00aecc;
 }
 
 .navbar__boards-btn-text {
@@ -122,12 +121,12 @@ TODO: Make sure the logo is centered and the rest pushed to the edge
 }
 
 /* TODO: Fix Star height */
-.board-header__star-btn{
+.board-header__star-btn {
   padding: 21px 0;
   height: 31px;
 }
 
-.board-header__star-btn i{
+.board-header__star-btn i {
   height: 100%;
 }
 
@@ -181,20 +180,18 @@ TODO: Make sure the logo is centered and the rest pushed to the edge
   position: relative;
 }
 
-.board-header__avatar-membership-badge{
+.board-header__avatar-membership-badge {
   color: gold;
-  font-size: .6rem;
+  font-size: 0.6rem;
   position: absolute;
   top: 3%;
-  right:5%; 
+  right: 5%;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
 }
 
 .board-content {
-
   background: var(--background-color);
-
 }
 
 /* TODO: Make the horizontal scroll on the parent class, so it is on the bottom of the page */
@@ -256,7 +253,7 @@ TODO: Make sure the logo is centered and the rest pushed to the edge
   border-radius: 3px;
   flex: 3 1 auto;
 }
-.board-list__add-card i{
+.board-list__add-card i {
   padding-right: 8px;
 }
 
