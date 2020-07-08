@@ -1,0 +1,238 @@
+/* TODO: Add Media queries and breakpoints */
+/* TODO: Add transparent scrollbar */
+
+/* CSS Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* General Styling */
+:root {
+  --background-color: #0079bf;
+  --main-font-color: #172b4d;
+  --card-background-color: #fff;
+  --list-background-color: #ebecf0;
+  --main-icon-color: #f4f5f7;
+  --list-footer-font-color: #5e6c84;
+}
+
+/* Only a font for Apple Systems specified */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: var(--background-color);
+}
+
+/* Navbar */
+
+/* 
+TODO: The icon containers are slight longer vertical than horizontal 
+TODO: Make sure the logo is centered and the rest pushed to the edge
+*/
+
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.15);
+  height: 40px;
+}
+
+.navbar__left-btns,
+.navbar__right-btns {
+  display: flex;
+}
+
+.navbar__left-btns > *,
+.navbar__right-btns > * {
+  background: rgba(100%, 100%, 100%, 0.3);
+  color: var(--main-icon-color);
+  margin: 4px 2px;
+  padding: 0.5rem;
+  border-radius: 3px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.navbar__avatar {
+  border-radius: 50%;
+  color: var(--main-font-color);
+  background-color: var(--card-background-color);
+  font-size: 14px;
+}
+
+.navbar__boards-btn-text {
+  display: inline;
+  margin-left: 0.5rem;
+}
+
+.navbar__searchbar-input {
+  display: inline;
+}
+.navbar__searchbar-input input {
+  display: inline;
+  background: transparent;
+  color: var(--main-icon-color);
+  border: none;
+  outline: none;
+}
+
+/* TODO: How do I get the full background white when in focus and not just the input? */
+.navbar__searchbar-input input:focus {
+  background: #fff;
+  color: var(--main-font-color);
+  height: 100%;
+}
+
+.navbar__logo img {
+  width: 100px;
+  opacity: 0.5;
+}
+
+/* Debug rule */
+.navbar__logo {
+}
+
+.navbar__logo img:hover {
+  opacity: 0.75;
+}
+
+.navbar__bell-btn {
+  background: #00c2e0;
+}
+
+/* TODO: Fix Star height */
+.board-header__star-btn {
+  height: 100%;
+}
+
+/* Board Header */
+
+.board-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.board-header__left-btns > *,
+.board-header__right-btns > * {
+  display: flex;
+  align-content: center;
+  background: rgba(100%, 100%, 100%, 0.3);
+  color: var(--main-icon-color);
+  font-size: 0.8rem;
+  margin: 0.15rem;
+  padding: 0.5rem;
+  border-radius: 2px;
+}
+
+.board-header div {
+  display: flex;
+  align-items: center;
+}
+
+.board-header--icon-padding {
+  padding-right: 0.5rem;
+}
+
+/* TODO: Fix the height of the border line */
+.board-header__divider-btn {
+  border-left: 1px rgba(255, 255, 255, 0.25) solid;
+  border-radius: 0;
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+
+.board-header__title {
+  font-size: 0.75rem;
+  background: none;
+}
+
+.board-header__avatar {
+  border-radius: 50%;
+  color: var(--main-font-color);
+  background-color: var(--card-background-color);
+  font-weight: bold;
+}
+
+.board-content {
+  height: 100vh;
+  background: var(--background-color);
+}
+
+/* TODO: Make the horizontal scroll on the parent class, so it is on the bottom of the page */
+.board-content__container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: auto;
+}
+
+.board-list {
+  background: var(--list-background-color);
+  min-width: 272px;
+  width: 272px;
+  border-radius: 3px;
+  margin: 0.5rem;
+
+  color: var(--main-font-color);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.board-list__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.6rem;
+  padding: 0 16px;
+  height: 40px;
+}
+
+.board-list__card-container {
+  overflow: auto;
+  max-height: 60vh;
+}
+
+.board-list__card {
+  background: var(--card-background-color);
+  border-radius: 3px;
+  padding: 6px 2px 8px 8px;
+  box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
+  margin: 0 8px 8px 8px;
+}
+
+.board-list__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--list-footer-font-color);
+  height: 38px;
+  padding: 0 16px;
+}
+
+.board-list__add-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border-radius: 3px;
+}
+.board-list__add-card i{
+  padding: 4px;
+}
+
+.board-list__template-btn {
+}
+
+.board-list__card:hover {
+  background: rgb(244, 245, 247);
+}
+
+.board-list__add-card:hover,
+.board-list__template-btn:hover {
+  background: #dadce2;
+}
